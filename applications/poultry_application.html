@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Invena – A modern and responsive HTML template for consulting businesses. Perfect for finance, corporate, and agency websites. SEO-friendly, fast-loading, and easy to customize. Create a professional online presence today!">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/fav.png">
+    <title>Invena Business Consulting HTML Template</title>
+    <link rel="stylesheet" href="../assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="../assets/css/plugins/metismenu.css">
+    <link rel="stylesheet" href="../assets/css/plugins/magnifying-popup.css">
+    <link rel="stylesheet" href="../assets/css/plugins/odometer.css">
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- partners area breadcrumb area wrapper -->
+    <div class="partner-breadcrumb bg_image"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../assets/images/service/poultry.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-area-left center">
+                        <span class="bg-title">Poultry</span>
+                        <h1 class="title">
+                            Poultry Application
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- partners area breadcrumb area end -->
+
+
+
+    <!-- project details area top -->
+    <div class="project-details-wrapper-image-top rts-section-gap">
+
+        <div class="container mt--30">
+            <div class="row mb--40">
+                <div class="col-lg-12">
+                    <div class="single-project-info-wrapper-inner">
+                        <h4 class="title">Poultry Applications</h4>
+                        <p class="disc">
+                            Animal industry reports may benefits including 85% decreased odor (of fecal matter) in hog
+                            operations utilizing activated water for both cleaning and consumption. Results showed that
+                            after hogs drank activated water the grade raised approximately 2 points, antibiotics usage
+                            decreased 20% - 30%, and mortality rate decreased from 18 - 10% to 3%.
+                        </p>
+                        <div class="row g-4">
+                            <!-- Content replaced -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="project-details-content-bottom">
+                        <h4 class="title mt--0">Specific Effect in Livestock Application</h4>
+                        <p class="disc">For Livestock ----- catf/e, dairy, pig , hog , chicken and duck</p>
+
+                        <h5 class="title mt--20">ACCELERATED GROWTH RATES IN EARLY DEVELOPMENT</h5>
+                        <p class="disc">15-35% increased</p>
+
+                        <h5 class="title mt--20">SHORTER CYCLE OF GROWTH FOR CHICKEN AND DUCK</h5>
+                        <p class="disc">Shortened cycle of growth from 40 days to 32 days for ducks</p>
+
+                        <h5 class="title mt--20">FEED EFFICIENCY AND IMPROVED DIGESTION</h5>
+                        <p class="disc">LTIWET water increases the solubility of water; within the animal this allows it
+                            to realize more nutritional value from its food as well as increasing the effectiveness of
+                            medications and supplements by up to 30%.</p>
+
+                        <h5 class="title mt--20">OVERALL HEALTH AND LOWER MORTALITY RATES</h5>
+                        <p class="disc">These factors which contribute to greater feed efficiency, better disease
+                            resistance, increased effectiveness of medications and supplements— generally improved
+                            overall good health—would logically show an improvement in fetal as well as generational
+                            mortality rate(reduced from 18% to 3% for ducks).</p>
+
+                        <h5 class="title mt--20">BETTER MEAT QUALITY AND EXTENDED SHELF LIFE</h5>
+                        <p class="disc">LTIWET Water has unique antibacterial and antioxidant properties; these values
+                            would ultimately contribute to better quality meat and longer freshness in packaged meat</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- project details area top -->
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../assets/js/plugins/jquery.js"></script>
+
+    <script src="../assets/js/plugins/odometer.js"></script>
+    <script src="../assets/js/plugins/jquery-appear.js"></script>
+
+
+    <script src="../assets/js/plugins/gsap.js"></script>
+    <script src="../assets/js/plugins/split-text.js"></script>
+    <script src="../assets/js/plugins/scroll-trigger.js"></script>
+    <script src="../assets/js/plugins/smooth-scroll.js"></script>
+    <script src="../assets/js/plugins/metismenu.js"></script>
+    <script src="../assets/js/plugins/popup.js"></script>
+
+    <script src="../assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/swiper.js"></script>
+    <script src="../assets/js/plugins/contact.form.js"></script>
+
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header-placeholder").load("../components/header.html", function () {
+                // Fix relative paths
+                $(this).find('a').each(function () {
+                    var href = $(this).attr('href');
+                    if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('#')) {
+                        $(this).attr('href', '../' + href);
+                    }
+                });
+                $(this).find('img').each(function () {
+                    var src = $(this).attr('src');
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        $(this).attr('src', '../' + src);
+                    }
+                });
+                // Initialize metisMenu
+                if ($('#mobile-menu-active').length) {
+                    $('#mobile-menu-active').metisMenu();
+                }
+            });
+
+            $("#footer-placeholder").load("../components/footer.html", function () {
+                // Fix relative paths
+                $(this).find('a').each(function () {
+                    var href = $(this).attr('href');
+                    if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('#')) {
+                        $(this).attr('href', '../' + href);
+                    }
+                });
+                $(this).find('img').each(function () {
+                    var src = $(this).attr('src');
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                        $(this).attr('src', '../' + src);
+                    }
+                });
+                // Update copyright year
+                var year = new Date().getFullYear();
+                $('.current-year').text(year);
+            });
+        });
+    </script>
+</body>
+
+</html>
