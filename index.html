@@ -726,6 +726,18 @@
     </div>
     <!-- rts blog area end -->
 
+    <div id="caution-popup-overlay" class="caution-popup-overlay">
+        <div class="caution-popup-content">
+            <div class="icon-box">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="popup-title">Important Notice</h3>
+            <p class="popup-message">LTI Global or any other tradename which includes LTI are not related to us at all
+            </p>
+            <button id="caution-popup-close" class="rts-btn btn-primary">Close</button>
+        </div>
+    </div>
+
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
@@ -749,6 +761,7 @@
     <script src="assets/js/main.js"></script>
     <script>
         $(function () {
+            // Header and Footer Load
             $("#header-placeholder").load("components/header.html", function () {
                 if (typeof rtsJs !== 'undefined') {
                     if (rtsJs.metismenu) rtsJs.metismenu();
@@ -764,6 +777,15 @@
                 if (typeof rtsJs !== 'undefined' && rtsJs.wowActive) {
                     rtsJs.wowActive();
                 }
+            });
+
+            // Caution Popup Logic
+            setTimeout(function () {
+                $('#caution-popup-overlay').addClass('active');
+            }, 1000);
+
+            $('#caution-popup-close').on('click', function () {
+                $('#caution-popup-overlay').removeClass('active');
             });
         });
     </script>

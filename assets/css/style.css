@@ -34747,3 +34747,101 @@ header.header-transparent.in-full-screen .action-area .menu-btn {
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
+
+/*-----------------------
+    Caution Popup CSS 
+-------------------------*/
+.caution-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 89, 158, 0.4);
+  /* Theme primary color with opacity */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.caution-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.caution-popup-content {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.9) translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--color-primary);
+  /* Theme accent */
+}
+
+.caution-popup-overlay.active .caution-popup-content {
+  transform: scale(1) translateY(0);
+}
+
+.caution-popup-content .icon-box {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 0, 3, 0.08);
+  /* Keep caution red for icon background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+
+.caution-popup-content .icon-box i {
+  font-size: 36px;
+  color: #FF0003;
+}
+
+.caution-popup-content .popup-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-heading-1);
+  margin-bottom: 15px;
+}
+
+.caution-popup-content .popup-message {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-body);
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.caution-popup-content .rts-btn {
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px rgba(4, 89, 158, 0.25);
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  /* Ensure centering */
+  display: inline-block;
+  /* Ensure it respects text-align center, or block with margin auto */
+}
+
+.caution-popup-content .rts-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(4, 89, 158, 0.35);
+}
